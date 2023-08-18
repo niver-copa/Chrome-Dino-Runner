@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import RicardoZarateVarela from "./components/json/RicardoZarateVarela.json";
+import foto from "./assets/foto.png";
 
-function App() {
-  const [count, setCount] = useState(0)
+const JsonDisplay = () => {
+  const [jsonData, setJsonData] = useState(null);
+
+  useEffect(() => {
+    setJsonData(RicardoZarateVarela); 
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+    <div className='d-flex justify-content-center align-items-center m-5' style={{ minHeight: '100vh' }}>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        
+        <div className='d-flex justify-content-center align-items-center m-4'>
+        <img src={foto} className="card-img-top" alt="Mi Imagen"  style={{ maxWidth: '50%' }} />
+        </div>
+        <div className="card-body">
+          {jsonData && (
+            <>
+              <div className="card-title">{jsonData.miNombre}</div>
+              <div className="card-text">Edad: {jsonData.miEdad}</div>
+              <div className="card-text">Dirección: {jsonData.miDireccion}</div>
+              <div className="card-text">Teléfono: {jsonData.miTelefono}</div>
+              <div className="card-text">Email: {jsonData.miEmail}</div>
+            </>
+          )}
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default JsonDisplay;
