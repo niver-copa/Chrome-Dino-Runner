@@ -4,5 +4,6 @@ const datos = [
     edad: 28,
     ciudad: "Portoviejo",
     pais: "Ecuador",
+    carrera: "Desarrollo Web",
   },
 ];
