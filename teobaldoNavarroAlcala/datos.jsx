@@ -1,6 +1,8 @@
 {
 "nombre: teobaldo navarro",
-"edad : 43"
+"edad : 43",
+"estado civil: casado"
+
 
 }
 
