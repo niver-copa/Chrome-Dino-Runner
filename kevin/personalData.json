@@ -1,0 +1,11 @@
+{
+    "arrayPersonalData":[{
+            "name":"Kevin",
+            "secondName":"Alexander",
+            "lastName":"Villacreses",
+            "favoriteColor":"green",
+            "city":"Quito",
+            "country":"Euador",
+            "pet":"Noa"
+        }]
+} 
