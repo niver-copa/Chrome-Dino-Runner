@@ -9,6 +9,7 @@ import pygame
 
 pygame.init()
 
+
 # Global Constants
 
 SCREEN_HEIGHT = 600
