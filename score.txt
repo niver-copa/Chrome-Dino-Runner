@@ -1,0 +1,4 @@
+score = 0
+score_int = 0
+death_count=0
+daemon=True
